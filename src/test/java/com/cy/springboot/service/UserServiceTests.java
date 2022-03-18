@@ -1,5 +1,6 @@
 package com.cy.springboot.service;
 
+import com.cy.springboot.entity.Address;
 import com.cy.springboot.entity.User;
 import com.cy.springboot.service.ex.ServiceException;
 import org.junit.Test;
@@ -14,6 +15,8 @@ public class UserServiceTests {
 
     @Autowired
     private IUserService userService;
+
+
 
     @Test
     public void reg() {
@@ -88,6 +91,7 @@ public class UserServiceTests {
             System.out.println(e.getMessage());
         }
     }
+
     @Test
     public void changeAvatar() {
         try {
@@ -101,5 +105,6 @@ public class UserServiceTests {
             System.out.println(e.getMessage());
         }
     }
+
 
 }

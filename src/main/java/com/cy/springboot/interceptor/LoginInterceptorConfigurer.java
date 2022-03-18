@@ -30,6 +30,7 @@ public class LoginInterceptorConfigurer implements WebMvcConfigurer {
         patterns.add("/user/login");
         patterns.add("/districts/**");
         patterns.add("/products/**");
+        patterns.add("/districts/**");
 
         registry.addInterceptor(loginInterceptor).addPathPatterns("/**").excludePathPatterns(patterns);
     }

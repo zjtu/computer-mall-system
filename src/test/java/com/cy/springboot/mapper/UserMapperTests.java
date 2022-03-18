@@ -1,5 +1,6 @@
 package com.cy.springboot.mapper;
 
+import com.cy.springboot.entity.Address;
 import com.cy.springboot.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +14,7 @@ import java.util.Date;
 @SpringBootTest
 //@RunWith:表示启动这个单元测试类(单元测试不能运行)，需要传递一个参数，必须是SpringRunner的实例类型
 @RunWith(SpringRunner.class)
-public class MapperTests {
+public class UserMapperTests {
 
     //userMapper报红：idea有检测功能，接口是不能直接创建bean的（动态代理技术解决）
     @Autowired
@@ -37,8 +38,8 @@ public class MapperTests {
 
     @Test
     public void findByUsername(){
-        User test001 = userMapper.findByUsername("test001");
-        System.out.println(test001);
+        User user = userMapper.findByUsername("kite");
+        System.out.println(user);
     }
 
     @Test
@@ -78,6 +79,12 @@ public class MapperTests {
         Date modifiedTime = new Date();
         Integer rows = userMapper.updateAvatarByUid(uid, avatar, modifiedUser, modifiedTime);
         System.out.println("rows=" + rows);
+    }
+
+    @Test
+    public void insertAddress(){
+        Address address = new Address();
+
     }
 
 }

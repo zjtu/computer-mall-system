@@ -41,6 +41,14 @@ public class BaseController {
             result.setState(6003);
         } else if (e instanceof FileUploadIOException) {
             result.setState(6004);
+        }else if (e instanceof AddressCountLimitException){
+            result.setState(4003);
+        }else if (e instanceof AddressNotFoundException) {
+            result.setState(4004);
+        } else if (e instanceof AccessDeniedException) {
+            result.setState(4005);
+        }else if (e instanceof DeleteException) {
+            result.setState(5002);
         }
         return result;
     }
