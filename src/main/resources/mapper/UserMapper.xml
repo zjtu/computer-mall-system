@@ -13,12 +13,12 @@
     property属性：实体类的属性名称
 -->
 <!--在定义映射规则时主键时不可以省略的，否则无法把唯一的一条记录存放在唯一的对象中-->
-        <id column="uid" property="uid"></id>
-        <result column="is_delete" property="isDelete"></result>
-        <result column="createdUser" property="createdUser"></result>
-        <result column="createdTime" property="createdTime"></result>
-        <result column="modifiedUser" property="modifiedUser"></result>
-        <result column="modifiedTime" property="modifiedTime"></result>
+        <id column="uid" property="uid"/>
+        <result column="is_delete" property="isDelete"/>
+        <result column="created_user" property="createdUser"/>
+        <result column="created_time" property="createdTime"/>
+        <result column="modified_user" property="modifiedUser"/>
+        <result column="modified_time" property="modifiedTime"/>
     </resultMap>
     <!--id属性:表示映射的接口中方法的名称
     useGeneratedKeys属性:表示开启某个字段的值递增(主键设置为递增)
