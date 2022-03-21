@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：用来指定当前的映射文件需要和哪个接口进行映射，需要指定接口的完整路径-->
+<mapper namespace="com.cy.springboot.mapper.DistrictMapper">
+    <!-- 获取全国所有省/某省所有市/某市所有区：List<District> findByParent(String parent) -->
+    <select id="findByParent" resultType="com.cy.springboot.entity.District">
+        SELECT
+            *
+        FROM
+            t_dict_district
+        WHERE
+            parent=#{parent}
+        ORDER BY
+            code ASC
+    </select>
+    <select id="findNameByCode" resultType="java.lang.String">
+        SELECT
+            name
+        FROM
+            t_dict_district
+        WHERE
+            code=#{code}
+    </select>
+</mapper>
